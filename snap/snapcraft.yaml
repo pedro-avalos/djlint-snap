@@ -1,0 +1,50 @@
+name: djlint
+title: djLint
+license: GPL-3.0
+version: "1.36.4"
+summary: HTML Template Linter and Formatter
+description: |
+  Once upon a time all the other programming languages had a formatter and
+  linter. CSS, JavaScript, Python, the C suite, TypeScript, Ruby, PHP, Go,
+  Swift, and you know the others. The cool kids on the block.
+
+  HTML templates were left out there on their own, in the cold, unformatted and
+  unlinted :( The dirty corner in your repository. Something had to change.
+
+  **djLint is a community build project to and add consistency to html templates.**
+
+website: https://djlint.com/
+contact: https://github.com/pedro-avalos/djlint-snap
+issues: https://github.com/pedro-avalos/djlint-snap
+source-code: https://github.com/djlint/djlint
+
+base: core24
+grade: stable
+confinement: strict
+compression: lzo
+
+platforms:
+  amd64:
+
+apps:
+  djlint:
+    command: bin/snapcraft-preload $SNAP/bin/djlint
+    plugs:
+      - home
+      - removable-media
+
+parts:
+  djlint:
+    plugin: python
+    source: https://github.com/djlint/djlint.git
+    source-tag: v${SNAPCRAFT_PROJECT_VERSION}
+
+  snapcraft-preload:
+    source: https://github.com/sergiusens/snapcraft-preload.git
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/
+    build-packages:
+      - on amd64:
+        - gcc-multilib
+        - g++-multilib
