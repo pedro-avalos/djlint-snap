@@ -14,8 +14,8 @@ description: |
   **djLint is a community build project to and add consistency to html templates.**
 
 website: https://djlint.com/
-contact: https://github.com/pedro-avalos/djlint-snap
-issues: https://github.com/pedro-avalos/djlint-snap
+contact: https://github.com/pedro-avalos/djlint-snap/issues
+issues: https://github.com/pedro-avalos/djlint-snap/issues
 source-code: https://github.com/djlint/djlint
 
 base: core24
