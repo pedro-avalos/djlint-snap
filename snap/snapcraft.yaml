@@ -1,4 +1,5 @@
 name: djlint
+icon: snap/gui/djlint.png
 title: djLint
 license: GPL-3.0
 version: 1.36.4
