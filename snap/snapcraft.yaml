@@ -2,7 +2,7 @@ name: djlint
 icon: snap/gui/djlint.png
 title: djLint
 license: GPL-3.0
-version: 1.40.8
+version: 1.40.10
 summary: HTML Template Linter and Formatter
 description: |
   Once upon a time all the other programming languages had a formatter and
